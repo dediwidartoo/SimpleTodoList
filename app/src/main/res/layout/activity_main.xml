@@ -6,34 +6,45 @@
     tools:context=".MainActivity">
 
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/lvItems"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-    </ListView>
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editNewItem"
-        android:layout_alignTop="@+id/btnAddItem"
-        android:hint="Nulis opo seng mok karepke"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/btnAddItem"
-        android:layout_toStartOf="@+id/btnAddItem"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btnAddItem"></ListView>
 
-    <Button
+    <EditText
+        android:id="@+id/editNewItem"
+        style="@android:style/Widget.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="tambah"
-        android:id="@+id/btnAddItem"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="onAddItem"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fontFamily="serif-monospace"
+        android:hint="Tulis sesuatu disini!"
+        android:inputType="text|textAutoComplete|textMultiLine|textImeMultiLine"
+        android:selectAllOnFocus="true"
+        android:textAppearance="@android:style/TextAppearance.Holo.Inverse"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="17sp"
+        android:visibility="visible"
+        android:layout_toLeftOf="@+id/btnAddItem"
+        android:layout_toStartOf="@+id/btnAddItem" />
 
+    <Button
+        android:id="@+id/btnAddItem"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="serif-monospace"
+        android:onClick="onAddItem"
+        android:text="Tambah"
+        android:textColor="@android:color/holo_blue_light"
+        android:textStyle="bold"
+        android:visibility="visible" />
 </RelativeLayout>
