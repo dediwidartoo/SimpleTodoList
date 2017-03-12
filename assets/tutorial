@@ -1,0 +1,5 @@
+$ git log --oneline
+$ git status
+$ git add .
+$ git commit -m "tambah module update dan guru"
+$ git push origin dediwi
