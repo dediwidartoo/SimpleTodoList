@@ -15,7 +15,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+import static android.R.string.no;
+import static com.dediwidarto.simpletodolist.R.id.editNewItem;
+
+public class MainActivity extends AppCompatActivity {
     private ArrayList<String> items;
     private ArrayAdapter<String> itemsAdapter;
     private ListView lvItems;
@@ -76,6 +79,4 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
     }
-
-
 }
